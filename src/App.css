@@ -26,6 +26,19 @@
   border-radius: 10px;
 }
 
+.overAllChartCont {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.barChartHolder {
+  width: 45%;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
 /**
  * Main wrapper
  */
