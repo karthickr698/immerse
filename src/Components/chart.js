@@ -17,13 +17,6 @@ const chart = ({ averageValue }) => {
           "#00A6B4",
           "#6800B4",
         ],
-        hoverBackgroundColor: [
-          "#501800",
-          "#4B5000",
-          "#175000",
-          "#003350",
-          "#35014F",
-        ],
         data: [1.0, 1.2, 0.8, 1.2, 1.0],
       },
     ],
@@ -40,13 +33,6 @@ const chart = ({ averageValue }) => {
           "#EE2326",
           "#EE2326",
         ],
-        hoverBackgroundColor: [
-          "#EC6666",
-          "#EC6666",
-          "#EC6666",
-          "#EC6666",
-          "#EC6666",
-        ],
         data: [1.0, 0.6, 0.8, 1.2, 1.0],
       },
     ],
@@ -61,11 +47,6 @@ const chart = ({ averageValue }) => {
           "#79D2DE",
           "#EC6666"
         ],
-        hoverBackgroundColor: [
-          "#501800",
-          "#4B5000",
-          "#175000"
-        ],
         data: [35.84,28.49,35.67],
       },
     ],
@@ -79,11 +60,6 @@ const chart = ({ averageValue }) => {
           "#005284",
           "#EE2326",
           "#009DAE"
-        ],
-        hoverBackgroundColor: [
-          "#501800",
-          "#4B5000",
-          "#175000"
         ],
         data: [65, 59, 80],
       },
