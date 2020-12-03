@@ -7,6 +7,11 @@ import { withStyles } from "@material-ui/core/styles";
 
 import TabPanel from "./TabPanel";
 import a11yProps from "../utils/allyProps";
+import Tenure from "./Analytics/Tenure";
+import Demography from "./Analytics/Demography";
+import Grade from "./Analytics/Grade";
+import Designation from "./Analytics/Designation";
+import HighestQualification from "./Analytics/HighestQualification";
 
 const StyledTabs = withStyles({
   indicator: {
@@ -56,19 +61,19 @@ const Analytics = () => {
           <Department />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          some
+          <Tenure />
         </TabPanel>
         <TabPanel value={value} index={2}>
-          Item Three
+          <Demography />
         </TabPanel>
         <TabPanel value={value} index={3}>
-          Item Four
+          <Designation />
         </TabPanel>
         <TabPanel value={value} index={4}>
-          Item Five
+          <Grade />
         </TabPanel>
         <TabPanel value={value} index={5}>
-          Item Six
+          <HighestQualification />
         </TabPanel>
       </div>
     </div>
