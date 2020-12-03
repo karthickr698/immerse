@@ -65,6 +65,33 @@ const chart = ({ averageValue }) => {
       },
     ],
   };
+  const horizontalState = {
+    labels: ["Anatomy","Purpose", "Mastery", "Wellbeing", "Trust"],
+    datasets: [
+      {
+        barThickness: 40,
+        backgroundColor: [
+          "#005284",
+          "#005284",
+          "#005284",
+          "#005284",
+          "#005284",
+        ],
+        data: [45, 41, 16, 79, 50,],
+      },
+      {
+        barThickness: 40,
+        backgroundColor: [
+          "#EE2326",
+          "#EE2326",
+          "#EE2326",
+          "#EE2326",
+          "#EE2326",
+        ],
+        data: [45, 79, 50, 41, 16],
+      },
+    ],
+  };
 
   return (
     <div>
@@ -100,6 +127,22 @@ const chart = ({ averageValue }) => {
           }}
         />
       </div>
+
+      <Bar
+        data={horizontalState}
+        options={{
+          cornerRadius: 10,
+          title: {
+            display: true,
+            text: "Average Rainfall per month",
+            fontSize: 20,
+          },
+          legend: {
+            display: true,
+            position: "right",
+          },
+        }}
+      />
 
       <Doughnut
         data={stateSelf}
