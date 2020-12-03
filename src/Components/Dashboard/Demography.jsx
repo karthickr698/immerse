@@ -14,12 +14,19 @@ const Demography = () => {
     getChartData("Dashboard", "Demography", "Management").then((res) =>
       console.log(res)
     );
-  });
+  }, []);
+  const handleOnChange = (category) => {
+    getChartData("Dashboard", "Demography", category).then((res) =>
+      console.log(res)
+    );
+  };
   return (
     <>
       <SelectSearch
         options={entities}
         search
+        autoComplete
+        onChange={handleOnChange}
         name="language"
         placeholder="Choose dashboard"
       />

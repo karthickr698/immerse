@@ -14,12 +14,19 @@ const Grade = () => {
     getChartData("Dashboard", "Grade", "Management").then((res) =>
       console.log(res)
     );
-  });
+  }, []);
+  const handleOnChange = (category) => {
+    getChartData("Dashboard", "Grade", category).then((res) =>
+      console.log(res)
+    );
+  };
   return (
     <>
       <SelectSearch
         options={entities}
         search
+        autoComplete
+        onChange={handleOnChange}
         name="language"
         placeholder="Choose dashboard"
       />

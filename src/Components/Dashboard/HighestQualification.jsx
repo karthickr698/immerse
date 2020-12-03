@@ -11,15 +11,24 @@ const HighestQualification = () => {
     getEntities("Dashboard", "Highest Qualification").then((entitiesOptions) =>
       setEntities(entitiesOptions)
     );
-    getChartData("Dashboard", "Highest Qualification", "Management").then((res) =>
+    getChartData(
+      "Dashboard",
+      "Highest Qualification",
+      "Management"
+    ).then((res) => console.log(res));
+  }, []);
+  const handleOnChange = (category) => {
+    getChartData("Dashboard", "Highest Qualification", category).then((res) =>
       console.log(res)
     );
-  });
+  };
   return (
     <>
       <SelectSearch
         options={entities}
         search
+        autoComplete
+        onChange={handleOnChange}
         name="language"
         placeholder="Choose dashboard"
       />

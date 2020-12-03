@@ -14,12 +14,19 @@ const Tenure = () => {
     getChartData("Dashboard", "Tenure", "Management").then((res) =>
       console.log(res)
     );
-  });
+  }, []);
+  const handleOnChange = (category) => {
+    getChartData("Dashboard", "Tenure", category).then((res) =>
+      console.log(res)
+    );
+  };
   return (
     <>
       <SelectSearch
         options={entities}
         search
+        autoComplete
+        onChange={handleOnChange}
         name="language"
         placeholder="Choose dashboard"
       />

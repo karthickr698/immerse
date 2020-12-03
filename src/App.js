@@ -4,11 +4,11 @@ import "./App.css";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Header from "./Components/Header.jsx";
-import TabPanel from './Components/TabPanel'
+import TabPanel from "./Components/TabPanel";
 import DashBoard from "./Components/DashBoard";
 import Analytics from "./Components/Analytics";
 
-import a11yProps from './utils/allyProps';
+import a11yProps from "./utils/allyProps";
 
 import { withStyles } from "@material-ui/core/styles";
 
@@ -45,17 +45,19 @@ function App() {
     <div className="App">
       <Header />
       <div className="sideNavCont">
-        <StyledTabs
-          orientation="vertical"
-          variant="scrollable"
-          value={value}
-          onChange={handleChange}
-          className="sideNav"
-        >
-          <StyledTab label="DashBoard" {...a11yProps(0)} />
-          <StyledTab label="Analytics" {...a11yProps(1)} />
-        </StyledTabs>
-        <div className='tabBody'>
+        <div>
+          <StyledTabs
+            orientation="vertical"
+            variant="scrollable"
+            value={value}
+            onChange={handleChange}
+            className="sideNav"
+          >
+            <StyledTab label="DashBoard" {...a11yProps(0)} />
+            <StyledTab label="Analytics" {...a11yProps(1)} />
+          </StyledTabs>
+        </div>
+        <div className="tabBody">
           <TabPanel value={value} index={0}>
             <DashBoard />
           </TabPanel>
