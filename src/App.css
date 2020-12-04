@@ -247,14 +247,10 @@
   color: #888;
 }
 
-<<<<<<< HEAD
 .dash-cont{
   margin-top: 10px;
   background-color: #fff;
   border-radius: 10px;
-=======
-.dash-cont {
->>>>>>> 7cd6e172632ed9cd489aa76e46773890f4487a5f
   display: flex;
   justify-content: space-evenly;
   font-size: 1.3rem;
@@ -275,7 +271,6 @@
   font-size: 1.2rem;
   font-weight: bold;
 }
-<<<<<<< HEAD
 .dash-mid{
   display: flex;
   justify-content: space-evenly;
@@ -287,5 +282,3 @@
   padding: 4rem;
   padding-top: 0;
 }
-=======
->>>>>>> 7cd6e172632ed9cd489aa76e46773890f4487a5f

@@ -1,7 +1,7 @@
 import React from "react";
 import { Doughnut, Radar, Bar } from "react-chartjs-2";
 import "../../App.css"
-import {HorizontalBar} from 'react-chartjs-2';
+
 
 require ('../../RoundedBars.js')
 

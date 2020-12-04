@@ -3,10 +3,8 @@ import SelectSearch from "react-select-search";
 import getEntities from "../../utils/getEntities";
 import getChartData from "../../utils/getChartData";
 import { averageValue } from "../../mock_data_supply";
-<<<<<<< HEAD
-=======
 import DashBoardScreen from "./DashBoardScreen";
->>>>>>> 7cd6e172632ed9cd489aa76e46773890f4487a5f
+import Chart from '../chart'
 
 const Department = () => {
   const [entities, setEntities] = useState([]);
@@ -30,7 +28,7 @@ const Department = () => {
         name="language"
         placeholder="Choose dashboard"
       />
-      <Chart data={averageValue} />
+      <DashBoardScreen data={averageValue} />
       
     </>
   );
