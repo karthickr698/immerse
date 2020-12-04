@@ -1,27 +1,29 @@
 import React, { useEffect, useState } from "react";
 import SelectSearch from "react-select-search";
+import getChartData from "../../utils/getChartData";
 import Chart from "../chart";
-import axios from 'axios';
-import { domain } from '../../utils/getDomain';
+import getEntities from "../../utils/getEntities";
 import { averageValue } from "../../mock_data_supply";
 
 const Demography = () => {
   const [entities, setEntities] = useState([]);
   useEffect(() => {
-    axios.get(`${domain}getEntities?surveyName=None&&section=Analytics&&dimension=Demography`).then(res => {
-      const { Entities } = res;
-      const entitiesOptions = Entities.map(str => ({
-          name: str,
-          value: str,
-        }));
+    getEntities("Analytics", "Demography").then((entitiesOptions) =>
       setEntities(entitiesOptions)
-    })
-  });
+    );
+  }, []);
+  const handleOnChange = (category) => {
+    getChartData("Analytics", "Demography", category).then((res) =>
+      console.log(res)
+    );
+  };
   return (
     <>
       <SelectSearch
         options={entities}
         search
+        autoComplete
+        onChange={handleOnChange}
         name="language"
         placeholder="Choose dashboard"
       />
