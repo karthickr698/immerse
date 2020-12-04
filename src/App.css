@@ -1,6 +1,3 @@
-.App {
-  text-align: center;
-}
 
 .sideNavCont {
   display: flex;
@@ -250,8 +247,37 @@
 }
 
 .dash-cont{
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 10px;
   display: flex;
   justify-content: space-evenly;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 1.5rem 0;
+}
+.number{
+  font-size: 2rem;
+}
+.dash{
+  width: 100%;
+  text-align: left;
+  margin-top: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  padding-left: 3rem;
+  padding-top: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
+}
+.dash-mid{
+  display: flex;
+  justify-content: space-evenly;
+  height: 20rem;
+}
+.dash-mid canvas{
+  width: 17rem !important;
+  height: 17rem !important;
+  padding: 4rem;
+  padding-top: 0;
 }
